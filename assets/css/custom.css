@@ -1,3 +1,25 @@
+/*
+    Changes by linuxserver (c) 2016
+    ===============================
+*/
+
+header.main-header {
+    max-height: 320px;
+}
+
+header.post-header section.post-meta a {
+    font-size: 12px;
+    color: #fff;
+    padding: 1px 6px;
+    border-radius: 5px;
+    background-color: #9EABB3;
+}
+
+/*
+    Original content
+    ================
+*/
+
 .post-header .social-share {
     margin-top: 1em;
 }
