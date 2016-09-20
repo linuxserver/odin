@@ -12,6 +12,14 @@
                 <img src="{{@blog.logo}}" alt="{{@blog.title}}" />
             </div>
             {{/if}}
+
+            {{! Searching }}
+            <form>
+                <input id="search-field" />
+                <input type="submit" value="search">
+            </form>
+            <section id="results"></section>
+
             <h1 class="page-title">{{@blog.title}}</h1>
             <h2 class="page-description">{{@blog.description}}</h2>
             {{navigation}}
