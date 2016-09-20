@@ -94,5 +94,6 @@ var social_link = {
 
 Released under the MIT License.  
 Copyright (c) 2016 [LinuxServer](https://www.linuxserver.io)
+
 Copyright (c) 2016 [Andrea Tarquini](https://blog.h4t0n.com) aka [@h4ton](https://twitter.com/h4t0n)  
 Copyright (c) 2013-2015 Ghost Foundation (for Casper theme substantial portions of code)
