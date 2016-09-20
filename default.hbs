@@ -62,6 +62,8 @@
 
     {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
     <script type="text/javascript" src="{{asset "js/jquery-1.11.3.min.js"}}"></script>
+    <script src="{{asset "js/jquery.ghostHunter.min.js"}}"></script>
+
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
 
@@ -70,7 +72,6 @@
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/prism.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/rrssb.min.js"}}"></script>
-    <script src="{{asset "js/jquery.ghostHunter.min.js"}}"></script>
 
     {{! Activate the social sharing buttons with a suitable post title/desricption/link}}
     <script type="text/javascript">
@@ -122,14 +123,27 @@
         }
     </script>
 
-    {{! ghostHuner configuration }}
     <script>
-        $("#search-field").ghostHunter({
-            results         : "#results",
-            info_template   : "<p>Number of posts found: {{amount}}</p>",
-            result_template : "<a href='{{link}}'><p><h2>{{title}}</h2><h4>{{pubDate}}</h4>{{description}}</p></a>",
-            onPageLoad      : true
+        $("#search-field").on('keyup', function() {
+            if ($.trim($(this).val().length) > 0) {
+                $('#clear-search').show();
+            } else {
+                $('#clear-search').hide();
+            }
         });
+
+        $(".search").on('blur', function() {
+            clearResults();
+            $('#clear-search').hide()
+        });
+
+        $('#clear-search').on('click', function() {
+            $(this).hide();
+        });
+
+        function clearResults() {
+            searchField.clear();
+        }
     </script>
 
 </body>
