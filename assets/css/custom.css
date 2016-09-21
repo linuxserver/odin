@@ -152,6 +152,10 @@
     ===============================
 */
 
+body {
+    font-size: 1.5rem;
+}
+
 header.main-header {
     max-height: 450px;
 }
