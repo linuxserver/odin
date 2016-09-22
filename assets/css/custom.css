@@ -267,3 +267,7 @@ ul.rrssb-buttons {
 .post-header.social-share {
     margin-top: 1.5em;
 }
+
+pre, pre[class*="language-"] {
+    margin: 0.5em 0 2em 0;
+}
