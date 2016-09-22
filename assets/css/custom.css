@@ -164,13 +164,13 @@ header.main-header.post-header {
     max-height: 350px;
 }
 
-header.post-header section.post-meta a {
+/*header.post-header section.post-meta a {
     font-size: 12px;
     color: #fff;
     padding: 1px 6px;
     border-radius: 5px;
     background-color: #9EABB3;
-}
+}*/
 
 header div.search form div.search-fields {
     position: relative;
@@ -257,4 +257,13 @@ section#results div.single-result a {
 
 section#results div.single-result a:hover {
     background-color: #efefef;
+}
+
+ul.rrssb-buttons {
+    width: 180px;
+    margin: 0 auto;
+}
+
+.post-header.social-share {
+    margin-top: 1.5em;
 }

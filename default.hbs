@@ -78,13 +78,9 @@
         jQuery(document).ready(function($) {
 
             $('.rrssb-buttons').rrssb({
-                // required:
                 title: '{{post.title}}',
                 url: '{{@blog.url}}{{post.url}}',
-
-                // optional:
-                 description: '{{post.title}}',
-                // emailBody: 'Usually email body is just the description + url, but you can customize it if you want'
+                description: '{{post.title}}'
             });
 
         });
@@ -101,6 +97,23 @@
             ga('create', window.ga_id, 'auto');
             ga('require', 'linkid', 'linkid.js');
             ga('send', 'pageview');
+        }
+    </script>
+
+    {{! If Piwik is the tracker of choice }}
+    <script type="text/javascript">
+
+        if (window.piwik_id && window.piwik_url) {
+            var _paq = _paq || [];
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            (function() {
+                var u=window.piwik_url;
+                _paq.push(['setTrackerUrl', u+'piwik.php']);
+                _paq.push(['setSiteId', window.piwik_id]);
+                var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+                g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+            })();
         }
     </script>
 
@@ -139,6 +152,7 @@
 
         $('#clear-search').on('click', function() {
             $(this).hide();
+            clearResults();
         });
 
         function clearResults() {
