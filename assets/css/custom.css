@@ -271,3 +271,7 @@ ul.rrssb-buttons {
 pre, pre[class*="language-"] {
     margin: 0.5em 0 2em 0;
 }
+
+.archive-template .main-header {
+    max-height: 450px;
+}
