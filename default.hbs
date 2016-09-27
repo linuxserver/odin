@@ -97,6 +97,10 @@
 
         if (window.piwik_id && window.piwik_url) {
             var _paq = _paq || [];
+
+            if (window.piwik_domains) {
+                _paq.push(["setDomains", window.piwik_domains]);
+            }
             _paq.push(['trackPageView']);
             _paq.push(['enableLinkTracking']);
             (function() {
