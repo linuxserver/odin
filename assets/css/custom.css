@@ -275,3 +275,7 @@ pre, pre[class*="language-"] {
 .archive-template .main-header {
     max-height: 450px;
 }
+
+.post-comments {
+    font-family: "Helvetica Neue",arial,sans-serif;
+}
