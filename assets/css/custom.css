@@ -279,3 +279,36 @@ pre, pre[class*="language-"] {
 .post-comments {
     font-family: "Helvetica Neue",arial,sans-serif;
 }
+
+.read-next + .site-footer {
+    position: relative;
+}
+
+.site-footer {
+    position: relative;
+    background-color: #222;
+    color: #FFF;
+    padding: 1rem 15px 0;
+}
+
+.site-footer a {
+    color: #FFF;
+}
+
+.site-footer section {
+    line-height: 35px;
+}
+
+.site-footer section.copyright,  .site-footer section.poweredby {
+    width: 33%;
+}
+
+.site-footer section.digitalocean {
+    width: 33%;
+    text-align: center;
+    float: left;
+}
+
+.site-footer img#powered-by-do {
+    margin-top: 5px;
+}
