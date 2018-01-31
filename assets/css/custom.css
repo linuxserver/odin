@@ -312,3 +312,25 @@ pre, pre[class*="language-"] {
 .site-footer img#powered-by-do {
     margin-top: 5px;
 }
+
+.postit {
+
+    padding: 1.5rem;
+    border-radius: 2px;
+    margin: 25px 0;
+    font-family: monospace;
+    text-rendering: geometricPrecision;
+}
+
+.postit.postit-note {
+    background-color: #e7f2fa;
+}
+
+.postit.postit-warning {
+    background-color: #ffedcc;
+}
+
+.postit.postit-alert {
+    background-color: #ff8e8e;
+    color: #fff;
+}
